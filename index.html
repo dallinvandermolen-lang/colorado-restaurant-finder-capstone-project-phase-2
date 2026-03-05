@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorado Restaurant Finder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+        }
+        #results {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Colorado Restaurant Finder</h1>
+    <p>Find the best restaurants in Colorado!</p>
+    <form id="searchForm">
+        <input type="text" id="searchInput" placeholder="Enter city or cuisine">
+        <button type="submit">Search</button>
+    </form>
+    <div id="results">
+        <!-- Search results will appear here -->
+    </div>
+
+    <script>
+        // Beginner JavaScript example
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const query = document.getElementById('searchInput').value;
+            document.getElementById('results').innerHTML = '<p>Searching for: ' + query + '</p>';
+            // In a real app, you would fetch data from an API here
+        });
+    </script>
+</body>
+</html>
